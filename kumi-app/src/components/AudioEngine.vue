@@ -127,6 +127,16 @@ async function playWithElevenLabs() {
     currentLineIndex.value = lineIndex
     emit('line-change', lineIndex)
 
+    // Skip user lines - user reads their own lines
+    if (line.role === 'user') {
+      // Pause for user to read (simulate reading time)
+      const readTime = Math.max(line.text_jp.length * 0.15, 1.5) * (1 / playbackRate.value)
+      await new Promise(resolve => setTimeout(resolve, readTime * 1000))
+      lineIndex++
+      await playNextLine()
+      return
+    }
+
     try {
       isGeneratingTTS.value = true
       const audioUrl = await ttsService.value.generateSpeech(line.text_jp)
@@ -167,6 +177,17 @@ async function playWithWebSpeech() {
     const line = props.dialogue[lineIndex]
     currentLineIndex.value = lineIndex
     emit('line-change', lineIndex)
+
+    // Skip user lines - user reads their own lines
+    if (line.role === 'user') {
+      // Pause for user to read (simulate reading time)
+      const readTime = Math.max(line.text_jp.length * 0.15, 1.5) * (1 / playbackRate.value)
+      setTimeout(() => {
+        lineIndex++
+        speakNextLine()
+      }, readTime * 1000)
+      return
+    }
 
     webSpeechSpeak(line.text_jp, {
       rate: playbackRate.value,
