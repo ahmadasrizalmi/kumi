@@ -1,0 +1,14 @@
+{
+  "projectId": "c2e12fd1-4f9f-4db4-9e1e-354f06c4a660",
+  "type": "frontend",
+  "name": "Back navigation from practice to home",
+  "description": "Test that clicking the back button returns to the home page",
+  "planSteps": [
+    { "type": "action", "description": "Navigate to the root page /" },
+    { "type": "action", "description": "Click any preset topic to enter practice view" },
+    { "type": "assertion", "description": "The practice view is displayed with dialogue lines" },
+    { "type": "action", "description": "Click the '戻る' back button" },
+    { "type": "assertion", "description": "The page navigates back to the home page at /" },
+    { "type": "assertion", "description": "The topic input form is visible again" }
+  ]
+}

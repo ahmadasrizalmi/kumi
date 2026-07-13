@@ -1,0 +1,17 @@
+{
+  "projectId": "c2e12fd1-4f9f-4db4-9e1e-354f06c4a660",
+  "type": "frontend",
+  "name": "Speed control cycles through playback rates",
+  "description": "Test that the speed button cycles through 1x, 0.75x, and 0.5x speeds",
+  "planSteps": [
+    { "type": "action", "description": "Navigate to the root page /" },
+    { "type": "action", "description": "Click any preset topic to enter practice view" },
+    { "type": "assertion", "description": "The speed control button shows '1x' as the default speed" },
+    { "type": "action", "description": "Click the speed control button" },
+    { "type": "assertion", "description": "The speed button now shows '0.75x'" },
+    { "type": "action", "description": "Click the speed control button again" },
+    { "type": "assertion", "description": "The speed button now shows '0.5x'" },
+    { "type": "action", "description": "Click the speed control button once more" },
+    { "type": "assertion", "description": "The speed button returns to '1x'" }
+  ]
+}

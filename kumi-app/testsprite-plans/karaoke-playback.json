@@ -1,0 +1,16 @@
+{
+  "projectId": "c2e12fd1-4f9f-4db4-9e1e-354f06c4a660",
+  "type": "frontend",
+  "name": "Karaoke mode playback with line highlighting",
+  "description": "Test the karaoke playback feature with synchronized text highlighting",
+  "planSteps": [
+    { "type": "action", "description": "Navigate to the root page /" },
+    { "type": "action", "description": "Click any preset topic button to generate a scenario" },
+    { "type": "assertion", "description": "The practice view loads with dialogue lines and playback controls" },
+    { "type": "action", "description": "Click the large play button in the playback controls" },
+    { "type": "assertion", "description": "The first dialogue line becomes highlighted with a colored left border" },
+    { "type": "assertion", "description": "A progress bar shows the current position in the dialogue" },
+    { "type": "action", "description": "Click the play button again to pause playback" },
+    { "type": "assertion", "description": "Playback pauses and the current highlight remains on the active line" }
+  ]
+}

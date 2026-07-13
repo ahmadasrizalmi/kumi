@@ -1,0 +1,21 @@
+name = "kumi-api"
+main = "index.js"
+compatibility_date = "2024-01-01"
+
+# D1 Database
+[[d1_databases]]
+binding = "DB"
+database_name = "kumi-db"
+database_id = "637b38ee-bcc1-42cb-9523-5e0da8b29efc"
+
+# Environment Variables
+# Set secrets via: wrangler secret put SECRET_NAME
+[vars]
+# DEEPSEEK_API_KEY - Set via: wrangler secret put DEEPSEEK_API_KEY
+# TTS_API_KEY - Set via: wrangler secret put TTS_API_KEY
+ALLOWED_ORIGINS = "https://kumi.pages.dev,http://localhost:3000"
+
+# KV Storage (optional for caching)
+# [[kv_namespaces]]
+# binding = "CACHE"
+# id = "YOUR_KV_NAMESPACE_ID"

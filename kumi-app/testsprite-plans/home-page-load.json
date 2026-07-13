@@ -1,0 +1,13 @@
+{
+  "projectId": "c2e12fd1-4f9f-4db4-9e1e-354f06c4a660",
+  "type": "frontend",
+  "name": "Home page loads with Kumi branding and topic form",
+  "description": "Verify the home page displays correctly with the Kumi logo, hero section, topic input form, and preset topic buttons",
+  "planSteps": [
+    { "type": "action", "description": "Navigate to the root page /" },
+    { "type": "assertion", "description": "The page title contains 'Kumi' and the hero section shows '日本語を話そう'" },
+    { "type": "assertion", "description": "A text input field with placeholder containing 'トピックを入力' is visible" },
+    { "type": "assertion", "description": "Six preset topic buttons are displayed: レストラン, 買い物, 駅, 病院, ホテル, 友達" },
+    { "type": "assertion", "description": "The '生成する' submit button is visible and disabled when input is empty" }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "projectId": "c2e12fd1-4f9f-4db4-9e1e-354f06c4a660",
+  "type": "frontend",
+  "name": "Shadowing tips section displays helpful guidance",
+  "description": "Verify the practice view shows shadowing tips in a blue info box",
+  "planSteps": [
+    { "type": "action", "description": "Navigate to the root page /" },
+    { "type": "action", "description": "Click any preset topic to enter practice view" },
+    { "type": "assertion", "description": "A blue tips section is visible with heading 'シャドウイングのコツ'" },
+    { "type": "assertion", "description": "The tips section contains 4 bullet points with practice advice" },
+    { "type": "assertion", "description": "One tip mentions '0.5x速度' for slow speed practice" }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "projectId": "c2e12fd1-4f9f-4db4-9e1e-354f06c4a660",
+  "type": "frontend",
+  "name": "Topic input enforces 100 character limit",
+  "description": "Verify the input field limits text to 100 characters and shows counter",
+  "planSteps": [
+    { "type": "action", "description": "Navigate to the root page /" },
+    { "type": "action", "description": "Click the topic input field and type a long string of 50 characters" },
+    { "type": "assertion", "description": "The character counter below the input shows '50/100 文字'" },
+    { "type": "action", "description": "Continue typing until reaching near 100 characters" },
+    { "type": "assertion", "description": "The input field has a maxlength attribute preventing more than 100 characters" },
+    { "type": "assertion", "description": "The submit button remains enabled when text is present" }
+  ]
+}

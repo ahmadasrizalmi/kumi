@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+/* Custom Theme for Kumi */
+@theme {
+  --color-washi: #FAFAF7;
+  --color-sumi: #212121;
+  --color-vermilion: #C23B22;
+  --color-ai-blue: #4A90D9;
+  --color-border: #CFD8DC;
+  --color-card: #FFFFFF;
+  --color-partner-bg: #E8F0FE;
+  --color-user-bg: #FDE8E4;
+  --color-finished: #9E9E9E;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-jp: 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif;
+}
+
+/* Base Styles */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-washi);
+  color: var(--color-sumi);
+  min-height: 100vh;
+}
+
+/* Japanese Text */
+.jp-text {
+  font-family: var(--font-jp);
+  font-size: 1.25rem;
+  line-height: 1.8;
+}
+
+/* Furigana Ruby Tags */
+ruby {
+  ruby-position: over;
+}
+
+rt {
+  font-size: 0.6em;
+  color: var(--color-finished);
+}
+
+/* Karaoke Line Styles */
+.karaoke-line {
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+  padding: 1rem 1.25rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.karaoke-line.partner {
+  background-color: var(--color-partner-bg);
+  border-left-color: var(--color-ai-blue);
+}
+
+.karaoke-line.user {
+  background-color: var(--color-user-bg);
+  border-left-color: var(--color-vermilion);
+}
+
+.karaoke-line.active {
+  transform: scale(1.02);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.karaoke-line.finished {
+  opacity: 0.6;
+  border-left-color: var(--color-finished);
+}
+
+/* Highlight Animation */
+@keyframes pulse-highlight {
+  0%, 100% { background-color: transparent; }
+  50% { background-color: rgba(74, 144, 217, 0.2); }
+}
+
+.highlight-active {
+  animation: pulse-highlight 1.5s infinite;
+}
+
+/* Recording Indicator */
+@keyframes recording-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.recording-indicator {
+  animation: recording-pulse 1s infinite;
+}
+
+/* Loading Spinner */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* Smooth Transitions */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: all 0.4s ease;
+}
+
+.slide-up-enter-from {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.slide-up-leave-to {
+  opacity: 0;
+  transform: translateY(-20px);
+}

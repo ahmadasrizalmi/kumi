@@ -1,0 +1,14 @@
+{
+  "projectId": "c2e12fd1-4f9f-4db4-9e1e-354f06c4a660",
+  "type": "frontend",
+  "name": "Generate scenario with custom topic text input",
+  "description": "Type a custom topic and submit to generate a scenario",
+  "planSteps": [
+    { "type": "action", "description": "Navigate to the root page /" },
+    { "type": "action", "description": "Click the topic input field and type 'ラーメンを注文'" },
+    { "type": "assertion", "description": "The character counter shows the current input length" },
+    { "type": "action", "description": "Click the '生成する' submit button" },
+    { "type": "assertion", "description": "A loading indicator appears showing '生成中...'" },
+    { "type": "assertion", "description": "After loading completes, the practice view displays with dialogue lines" }
+  ]
+}

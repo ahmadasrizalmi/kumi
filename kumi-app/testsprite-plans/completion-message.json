@@ -1,0 +1,13 @@
+{
+  "projectId": "c2e12fd1-4f9f-4db4-9e1e-354f06c4a660",
+  "type": "frontend",
+  "name": "Completion message appears after finishing dialogue",
+  "description": "Verify the congratulations message appears when all dialogue lines are completed",
+  "planSteps": [
+    { "type": "action", "description": "Navigate to the root page /" },
+    { "type": "action", "description": "Click any preset topic to enter practice view" },
+    { "type": "action", "description": "Click the play button and wait for playback to complete" },
+    { "type": "assertion", "description": "A completion section appears with 'お疲れ様でした!' text" },
+    { "type": "assertion", "description": "Three buttons are shown: 'もう一度練習', 'デュエット再生', and '新しいトピック'" }
+  ]
+}
